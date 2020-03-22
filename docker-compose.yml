@@ -1,0 +1,34 @@
+version: '3'
+services:
+  web:
+    image: crateway:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - logs:/var/log
+    links:
+      - mysql
+  mysql:
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    restart: on-failure
+    ports:
+      - "3307:3306"
+    volumes:
+      - logs:/var/log
+    environment:
+      MYSQL_ROOT_PASSWORD: abcdefg
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: on-failure
+    ports:
+      - "8081:80"
+    volumes:
+      - logs:/var/log
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+
+volumes:
+  logs: {}
