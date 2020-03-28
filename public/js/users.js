@@ -42,6 +42,8 @@ async function getUsers() {
 function showNewUserPopup() {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Add New User</h2>'))
+            .append($('<br>'))
             .append($('<label for="createEmail">Email</label>'))
             .append($('<input type="text" name="email" id="createEmail"/>'))
             .append($('<br>'))
@@ -56,7 +58,6 @@ function showNewUserPopup() {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -67,6 +68,8 @@ function showNewUserPopup() {
 function showEditUserPopup(user) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Edit User</h2>'))
+            .append($('<br>'))
             .append($('<label for="editName">Name</label>'))
             .append($('<input type="text" name="name" id="editName"/>'))
             .append($('<br>'))
@@ -78,7 +81,6 @@ function showEditUserPopup(user) {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -89,6 +91,8 @@ function showEditUserPopup(user) {
 function showRemoveUserPopup(user) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Remove User</h2>'))
+            .append($('<br>'))
             .append($('<label for="removeEmail">Email</label>'))
             .append($('<input type="text" name="email" id="removeEmail"/>'))
             .append($('<br>'))
@@ -99,7 +103,6 @@ function showRemoveUserPopup(user) {
                     });
                 }
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))

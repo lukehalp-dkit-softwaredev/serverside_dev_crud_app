@@ -45,6 +45,8 @@ async function getCompanies() {
 function showNewCompanyPopup() {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Add Company</h2>'))
+            .append($('<br>'))
             .append($('<label for="createEmail">Email</label>'))
             .append($('<input type="text" name="email" id="createEmail"/>'))
             .append($('<br>'))
@@ -62,7 +64,6 @@ function showNewCompanyPopup() {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -73,6 +74,8 @@ function showNewCompanyPopup() {
 function showEditCompanyPopup(company) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Edit Company</h2>'))
+            .append($('<br>'))
             .append($('<label for="editEmail">Email</label>'))
             .append($('<input type="text" name="email" id="editEmail"/>'))
             .append($('<br>'))
@@ -90,7 +93,6 @@ function showEditCompanyPopup(company) {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -101,6 +103,8 @@ function showEditCompanyPopup(company) {
 function showRemoveCompanyPopup(company) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Remove Company</h2>'))
+            .append($('<br>'))
             .append($('<label for="removeEmail">Email</label>'))
             .append($('<input type="text" name="email" id="removeEmail"/>'))
             .append($('<br>'))
@@ -111,7 +115,6 @@ function showRemoveCompanyPopup(company) {
                     });
                 }
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))

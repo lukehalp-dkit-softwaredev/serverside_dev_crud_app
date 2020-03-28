@@ -46,6 +46,8 @@ async function getOrders() {
 function showNewOrderPopup() {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Add New Order</h2>'))
+            .append($('<br>'))
             .append($('<label for="createOrigin">Origin</label>'))
             .append($('<input type="text" name="origin" id="createOrigin"/>'))
             .append($('<br>'))
@@ -63,7 +65,6 @@ function showNewOrderPopup() {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -74,6 +75,8 @@ function showNewOrderPopup() {
 function showEditOrderPopup(order) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Edit Order</h2>'))
+            .append($('<br>'))
             .append($('<label for="editOrigin">Origin</label>'))
             .append($('<input type="text" name="origin" id="editOrigin"/>'))
             .append($('<br>'))
@@ -88,7 +91,6 @@ function showEditOrderPopup(order) {
                     form.remove();
                 });
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))
@@ -99,6 +101,8 @@ function showEditOrderPopup(order) {
 function showRemoveOrderPopup(order) {
     let form = $('<div class="popup"></div>')
         .append($('<div class="popup-content"></div>')
+            .append($('<h2>Remove Order</h2>'))
+            .append($('<br>'))
             .append($('<label for="removeId">ID</label>'))
             .append($('<input type="text" name="id" id="removeId"/>'))
             .append($('<br>'))
@@ -109,7 +113,6 @@ function showRemoveOrderPopup(order) {
                     });
                 }
             }))
-            .append($('<br>'))
             .append($('<button>Cancel</button>').click(function() {
                 form.remove();
             }))

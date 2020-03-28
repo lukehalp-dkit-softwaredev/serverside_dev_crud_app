@@ -225,8 +225,25 @@ main {
     top: 25vh;
     background-color: white;
     padding-left: 5%;
+    padding-top: 2%;
     display: block;
     box-sizing: border-box;
+
+    label {
+      margin-right: 1%;
+    }
+
+    input {
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+
+    button {
+      margin-top: 1%;
+      margin-bottom: 1%;
+      margin-right: 2%;
+    }
+
   }
 }
 
